@@ -16,6 +16,7 @@ const sortColors = (n) => {
       n[i] = temp;
       end--;
     } else {
+      // we want to compare the last swapped element as such we do not advancing i
       i++;
     }
   }
