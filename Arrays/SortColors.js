@@ -16,6 +16,7 @@ const sortColors = (n) => {
       n[i] = temp;
       end--;
     } else {
+      // we wont to check the swapped value from the back
       i++;
     }
   }
