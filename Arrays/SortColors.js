@@ -22,4 +22,4 @@ const sortColors = (n) => {
   }
   return n;
 };
-console.log(sortColors("hello"));
+console.log(sortColors([1, 1, 0, 0, 2, 2]));
