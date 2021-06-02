@@ -10,6 +10,7 @@ var rotate = function (matrix) {
     }
   }
 
+  // swap first and last index
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n / 2; j++) {
       temp = matrix[i][j];
