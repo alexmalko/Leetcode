@@ -1,21 +1,9 @@
-var isValid = function (s) {
-  let stack = [];
-  for (let i = 0; i < s.length; i++) {
-    let par = s[i];
-    if (par === "(") {
-      stack.push(")");
-    } else if (par == "{") {
-      stack.push("}");
-    } else if (par == "[") {
-      stack.push("]");
-    } else {
-      if (stack.pop() !== par) {
-        return false;
-      }
-    }
+function simpleArraySum(ar) {
+  let sum = 0;
+  for (let i = 0; i < ar.length; i++) {
+    sum += ar[i];
   }
-  console.log(stack);
-  return stack.length == 0;
-};
+  return sum;
+}
 
-console.log(isValid("(()))"));
+console.log(simpleArraySum([1, 2, 3]));
