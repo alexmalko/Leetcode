@@ -10,15 +10,15 @@ var romanToInt = function (s) {
   };
   let total = 0;
   for (let i = 0; i < s.length; i++) {
-    let p1 = obj[s[i]];
-    let p2 = obj[s[i + 1]];
-    if (p1 < p2) {
-      total -= p1;
+    num1 = obj[s[i]];
+    num2 = obj[s[i + 1]];
+    if (num1 < num2) {
+      total -= num1;
     } else {
-      total += p1;
+      total += num1;
     }
   }
   return total;
 };
 
-console.log(romanToInt("III"));
+console.log(romanToInt("IIX"));
