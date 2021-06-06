@@ -1,21 +1,20 @@
 var intersect = function (nums1, nums2) {
   let result = [],
-    map = {};
-  for (const char of nums1) {
-    if (map[char]) {
-      map[char]++;
+    obj = {};
+  for (let num of nums1) {
+    if (obj[num]) {
+      obj[num]++;
     } else {
-      map[char] = 1;
+      obj[num] = 1;
     }
   }
-  for (const char of nums2) {
-    if (map[char]) {
-      console.log(map);
-      result.push(char);
-      map[char]--;
+  for (let num of nums2) {
+    if (obj[num]) {
+      result.push(num);
+      obj[num]--;
     }
   }
   return result;
 };
 
-console.log(intersect([1, 2, 2, 1], [2, 2]));
+console.log(intersect([2, 2, 2, 2, 2], [2, 2, 1, 1, 1, 1, 1]));
