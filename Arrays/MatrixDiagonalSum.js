@@ -3,7 +3,6 @@ var diagonalSum = function (mat) {
     n = mat.length - 1;
   for (let i = 0; i <= n; i++) {
     sum += mat[i][i] + mat[i][n - i];
-    console.log(mat[i][n - i]);
   }
   if ((n + 1) % 2) {
     sum -= mat[n / 2][n / 2];
