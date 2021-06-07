@@ -1,12 +1,11 @@
 var maxSubArray = function (nums) {
   let current = nums[0];
-  let max = nums[0];
-
-  for (const num of nums) {
-    current = Math.max(num, current + num);
-    max = Math.max(current, max);
+  let result = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    current = Math.max(current + nums[i], nums[i]);
+    result = Math.max(result, current);
   }
-  return max;
+  return result;
 };
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
