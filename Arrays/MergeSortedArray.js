@@ -16,21 +16,4 @@ var merge = function (nums1, m, nums2, n) {
   return nums1;
 };
 
-var merge = function (nums1, m, nums2, n) {
-  let p1 = 0,
-    p2 = 0,
-    result = [];
-  for (let i = 0; i < m + n; i++) {
-    if (nums1[p1] < nums2[p2]) {
-      result.push(nums1[p1]);
-      p1++;
-    } else {
-      result.push(nums2[p2]);
-      p2++;
-    }
-  }
-  console.log(result);
-  return result;
-};
-
 console.log(merge([1, 2, 3], 3, [2, 5, 6], 3));
