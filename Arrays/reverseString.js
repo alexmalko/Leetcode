@@ -1,15 +1,8 @@
 var reverseString = function (s) {
-  let beg = 0,
-    end = s.length - 1,
-    temp;
-  while (beg < end) {
-    temp = s[beg];
-    s[beg] = s[end];
-    s[end] = temp;
-    beg++;
-    end--;
+  console.log(s.length);
+  for (let i = s.length; i < 0; i--) {
+    console.log("hello");
   }
-  return s;
 };
 
-console.log(reverseString(["h", "e", "l", "l", "O"]));
+console.log(reverseString("hello"));
