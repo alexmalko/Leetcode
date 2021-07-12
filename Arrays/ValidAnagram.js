@@ -2,7 +2,7 @@ var isAnagram = function (s, t) {
   if (s.length !== t.length) return false;
   let obj = {};
   for (const char of s) {
-    if (obj[char]) {
+    if (char in obj) {
       obj[char]++;
     } else {
       obj[char] = 1;

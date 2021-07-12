@@ -1,9 +1,6 @@
 let fib = (n) => {
-  if (n < 2) {
-    return n;
-  } else {
-    return fib(n - 2) + fib(n - 1);
-  }
+  if (n < 2) return 1;
+  return fib(n - 2) + fib(n - 1);
 };
 
-console.log(fib(6));
+console.log(fib(5));
