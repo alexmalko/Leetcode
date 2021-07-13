@@ -31,7 +31,7 @@ var preorderTraversal = function (root) {
 var postorderTraversal = function (root) {
   let result = [];
   function traverse(node) {
-    if (node === null) return null;
+    if (!nood) return null;
     traverse(node.left);
     traverse(node.right);
     result.push(node.val);
@@ -57,6 +57,7 @@ root.right = new Node(25);
 root.right.left = new Node(22);
 root.right.right = new Node(27);
 
+// DFS
 function traverse(root) {
   if (root === null) return;
   traverse(root.left);
