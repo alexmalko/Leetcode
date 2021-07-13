@@ -27,4 +27,24 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
   return arr;
 }
 
-console.log(quickSort([100, -3, 2, 4, 6, 9, 1, 2, 5, 3, 23]));
+// another implementation
+// https://open.appacademy.io/learn/full-stack-online/data-structures-and-algorithms/quick-sort-notes
+function quickSort2(array) {
+  if (array.length <= 1) {
+    return array;
+  }
+
+  let pivot = array.shift();
+  let left = array.filter((el) => el < pivot);
+  let right = array.filter((el) => el >= pivot);
+
+  let leftSorted = quickSort2(left);
+  let rightSorted = quickSort2(right);
+
+  console.log("left sorted", leftSorted);
+  console.log("right sorted", rightSorted);
+
+  return [...leftSorted, pivot, ...rightSorted];
+}
+
+console.log(quickSort2([100, -3, 6, 9, 3, 23]));
