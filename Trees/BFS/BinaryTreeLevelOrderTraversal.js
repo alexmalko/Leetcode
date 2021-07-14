@@ -9,6 +9,7 @@ var levelOrder = function (root) {
     let row = [];
     let rowSize = queue.length;
     while (rowSize) {
+      // array.shift() removes element from the front of the array
       node = queue.shift();
       if (node.left) queue.push(node.left);
       if (node.right) queue.push(node.right);
@@ -37,5 +38,27 @@ root.right = new Node(25);
 root.right.left = new Node(22);
 root.right.right = new Node(27);
 
+// DFS
+function traverseDFS(root) {
+  if (root === null) return;
+  traverseDFS(root.left);
+  console.log(root.val);
+  traverseDFS(root.right);
+}
+
+// BFS
+function traverseBFS(root) {
+  let queue = [root];
+
+  while (queue.length) {
+    let node = queue.shift();
+
+    console.log(node.val);
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+}
+
 console.log(root);
-console.log(levelOrder(root));
+console.log(traverseDFS(root));
+console.log(traverseBFS(root));
