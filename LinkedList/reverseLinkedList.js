@@ -19,16 +19,19 @@ class ListNode {
   }
 }
 
-let one = new ListNode("hello", new ListNode("world", new ListNode("there")));
-
-// let two = new ListNode("wold");
-// one.next = two;
-
 function traverse(head) {
   if (head === null) return;
   console.log(head.val);
   traverse(head.next);
 }
+
+// let one = new ListNode("hello", new ListNode("world", new ListNode("there")));
+// let two = new ListNode("wold");
+// one.next = two;
+
+// recursive traversal
+let one = new ListNode("hello");
+// one.next = new ListNode("world");
 
 console.log(one);
 console.log(traverse(one));
