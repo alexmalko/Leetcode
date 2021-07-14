@@ -59,14 +59,15 @@ root.right.right = new Node(27);
 
 // DFS
 function traverse(root) {
-  if (root === null) return;
-  traverse(root.left);
-  console.log(root.val);
-  traverse(root.right);
+  let arr = [];
+  function traverse1(node) {
+    if (node === null) return null;
+    traverse1(node.left);
+    arr.push(node.val);
+    traverse1(node.right);
+  }
+  traverse1(root);
+  return arr;
 }
-
-console.log(root);
-
-// console.log(inorderTraversal(root));
 
 console.log(traverse(root));
