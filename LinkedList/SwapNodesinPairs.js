@@ -1,22 +1,6 @@
 var swapPairs = function (head) {
   if (head === null) return null;
   let temp = new ListNode();
-  temp.next = head;
-  let current = temp;
-  while (current.next && current.next.next) {
-    let first = current.next;
-    let second = current.next.next;
-    first.next = second.next;
-    current.next = second;
-    current.next.next = first;
-    current = current.next.next;
-  }
-  return temp.next;
-};
-
-var swapPairs = function (head) {
-  if (head === null) return null;
-  let temp = new ListNode();
   let node = temp;
   temp.next = head;
   while (node && node.next && node.next.next) {
@@ -31,4 +15,16 @@ var swapPairs = function (head) {
   }
 
   return temp.next;
+};
+
+var swapPairs = function (head) {
+  if (head === null || head.next === null) return head;
+  let temp = head;
+  head = head.next;
+  temp.next = head.next;
+  head.next = temp;
+
+  temp.next = swapPairs(temp.next);
+
+  return head;
 };

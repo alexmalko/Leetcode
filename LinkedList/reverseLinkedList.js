@@ -11,6 +11,9 @@ var reverseList = function (head) {
   return prev;
 };
 
+// recursive reversal
+function reverseListRec(head) {}
+
 // construct linkedList
 class ListNode {
   constructor(val, next) {
@@ -25,15 +28,8 @@ function traverse(head) {
   traverse(head.next);
 }
 
-// let one = new ListNode("hello", new ListNode("world", new ListNode("there")));
-// let two = new ListNode("wold");
-// one.next = two;
-
-// recursive traversal
-let one = new ListNode("hello");
-// one.next = new ListNode("world");
+let one = new ListNode("hello", new ListNode("world", new ListNode("there")));
 
 console.log(one);
 console.log(traverse(one));
-
 console.log(reverseList(one));
