@@ -1,12 +1,14 @@
+// iterative
 var reverseList = function (head) {
-  let prev = null,
-    curr = head,
-    next;
-  while (curr) {
-    next = curr.next;
-    curr.next = prev;
-    prev = curr;
-    curr = next;
+  let prev = null;
+  while (head) {
+    // remember next
+    next = head.next;
+    // set next to prev
+    head.next = prev;
+    // advance prev and head pointers
+    prev = head;
+    head = next;
   }
   return prev;
 };
@@ -22,14 +24,17 @@ class ListNode {
   }
 }
 
+let one = new ListNode(
+  "1",
+  new ListNode("2", new ListNode("3", new ListNode("4", new ListNode("5"))))
+);
+
 function traverse(head) {
   if (head === null) return;
   console.log(head.val);
   traverse(head.next);
 }
 
-let one = new ListNode("hello", new ListNode("world", new ListNode("there")));
-
 console.log(one);
-console.log(traverse(one));
+// console.log(reverseList(one));
 console.log(reverseList(one));

@@ -17,14 +17,19 @@ var swapPairs = function (head) {
   return temp.next;
 };
 
-var swapPairs = function (head) {
-  if (head === null || head.next === null) return head;
-  let temp = head;
-  head = head.next;
-  temp.next = head.next;
-  head.next = temp;
+// construct linkedList
+class ListNode {
+  constructor(val, next) {
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
+  }
+}
 
-  temp.next = swapPairs(temp.next);
+let one = new ListNode(
+  "1",
+  new ListNode("2", new ListNode("3", new ListNode("4", new ListNode("5"))))
+);
 
-  return head;
-};
+console.log(one);
+
+console.log(swapPairs(head));
