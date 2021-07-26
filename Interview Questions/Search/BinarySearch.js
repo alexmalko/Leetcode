@@ -1,3 +1,4 @@
+// iterative binary search
 var binarySearch = function (nums, target) {
   if (nums.length === 0) return -1;
   let left = 0;
