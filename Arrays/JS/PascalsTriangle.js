@@ -13,6 +13,4 @@ var generate = function (numRows) {
   return result;
 };
 
-function pascal(n) {}
-
 console.log(pascal(5));

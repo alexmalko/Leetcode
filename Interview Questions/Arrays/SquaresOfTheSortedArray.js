@@ -1,5 +1,4 @@
 function squares(nums) {
-  console.log("hello");
   let left = 0,
     right = nums.length - 1,
     position = nums.length - 1,

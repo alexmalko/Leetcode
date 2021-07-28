@@ -1,8 +1,8 @@
-function move(nums) {
+function remove(nums, val) {
   let index = 0,
     temp;
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] !== 0) {
+    if (nums[i] !== val) {
       temp = nums[index];
       nums[index] = nums[i];
       nums[i] = temp;
@@ -12,4 +12,4 @@ function move(nums) {
   return nums;
 }
 
-console.log(move([0, 1, 0, 3, 12]));
+console.log(remove([0, 2, 2, 0], 0));
