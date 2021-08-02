@@ -3,12 +3,12 @@ function strStr(haystack, needle) {
   for (let i = 0; i < haystack.length; i++) {
     let k = i,
       j = 0;
-    while (haystack[k] == needle[j] && j < needle.length) {
-      k++, j++;
+    while (haystack[k] === needle[j] && j < needle.length) {
+      k++;
+      j++;
     }
-    if (j == needle.length) return i;
+    if (needle.length == j) return i;
   }
   return -1;
 }
-
-console.log(strStr("hello", "ll"));
+console.log(strStr("hellollaa", "ll"));

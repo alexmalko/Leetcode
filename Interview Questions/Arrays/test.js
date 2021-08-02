@@ -1,15 +1,12 @@
-function swap(arr) {
-  let index = 0,
-    temp;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== 0) {
-      temp = arr[index];
-      arr[index] = arr[i];
-      arr[i] = temp;
+function test(arr) {
+  let index = 1;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] !== arr[i + 1]) {
+      arr[index] = arr[i + 1];
       index++;
     }
   }
   return arr;
 }
 
-console.log(swap([1, 1, 0, 0, 1, 1]));
+console.log(test([1, 2, 2, 3, 4]));
