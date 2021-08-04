@@ -16,3 +16,5 @@ var intersect = function (nums1, nums2) {
   }
   return result;
 };
+
+console.log(intersect([1, 2, 2, 1], [2, 2]));
