@@ -14,4 +14,4 @@ function search(nums, target) {
   return -1;
 }
 
-console.log(search([5], 5));
+console.log(search([1, 2, 3, 5, 7], 5));
